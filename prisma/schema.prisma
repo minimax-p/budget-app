@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Transaction {
+  id           Int      @id @default(autoincrement())
+  type         String
+  category     String
+  amount       Float
+  timestamp    DateTime @default(now())
+  counterparty String
+  tag          String?
+  notes        String?
+  createdAt    DateTime @default(now())
+}
