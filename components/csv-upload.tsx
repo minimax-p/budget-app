@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { toast } from "@/hooks/use-toast"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import {predefinedCategories} from "@/lib/contants";
 
 type ParsedTransaction = {
     timestamp: string
@@ -16,18 +17,6 @@ type ParsedTransaction = {
     category: string
     tag: string
     counterparty: string
-}
-
-const predefinedCategories = {
-    'Food & Dining': ['🍽️ Restaurants', '🛒 Groceries', '☕ Coffee Shops'],
-    'Transportation': ['🚗 Gas', '🚇 Public Transit', '🚕 Taxi/Uber'],
-    'Housing': ['🏠 Rent/Mortgage', '🔧 Utilities', '🛠️ Maintenance'],
-    'Entertainment': ['🎬 Movies', '🎵 Music', '🎮 Games'],
-    'Shopping': ['👚 Clothing', '🛍️ General', '📚 Books'],
-    'Health & Fitness': ['💊 Healthcare', '🏋️ Gym', '🧘 Wellness'],
-    'Travel': ['✈️ Flights', '🏨 Accommodation', '🍴 Dining Out'],
-    'Education': ['📚 Tuition', '📖 Books', '💻 Online Courses'],
-    'Income': ['💼 Salary', '💰 Freelance', '📈 Investments'],
 }
 
 export function CSVUpload() {
