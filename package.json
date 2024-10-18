@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "components": "npx shadcn@latest add button input select"
   },
   "dependencies": {
     "@prisma/client": "^5.21.0",
